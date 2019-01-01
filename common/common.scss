@@ -2,28 +2,29 @@
    VARIABLES: choose the colors of your banner
 -------------------------------------------------*/
 
-$main-color: $primary;
-$text-color: $primary;
-$link-color: $tertiary;
-$background-color:$secondary;
-$button-color:$tertiary;
-$highlight-color:$secondary;
-$icon-color: $quaternary;
+$main-color: $primary; // changed to theme instead of specific color by SP
+$text-color: $primary; // added by SP
+$link-color: $tertiary; // added by SP
+$background-color:$secondary; // changed to theme by SP
+$button-color:$tertiary; // added by SP
+$highlight-color:$secondary; // added by SP
+$icon-color: $quaternary; // added by SP
 
 /*-------------------------------------------------
    EXPAND-COLLAPSE BANNER
 -------------------------------------------------*/
 #banner-content_wrap_toggle {
     display: block;
-    background: $button-color;
+    background: $button-color; // changed by SP
     text-align: center;
-    color: $highlight-color;
+    color: $highlight-color; // changed by SP
     font-weight: bold;
     text-decoration:none;
-    border:1px solid $tertiary;
-    padding: 0px 12px;
+    border:1px solid $tertiary; // added by SP
+    padding: 0px 12px; // top/bottom padding changed by SP
 }
 
+// "visited" behavior added by SP
 #banner-content_wrap_toggle:visited {
     color: $highlight-color;
     background: $tertiary;
@@ -32,15 +33,16 @@ $icon-color: $quaternary;
 
 #banner-content_wrap_toggle:hover {
     text-decoration:none;
-    color: $text-color;
-    background: $background-color;
+    color: $text-color; // changed by SP
+    background: $background-color; // changed by SP
 }
 
+
 .banner-content_toggle_wrapper {
-    border: 2px solid $main-color;
-    background: $background-color;
-    margin: 0 auto 1em auto;
-    width:10em;
+    border: 2px solid $main-color; // float:right removed by SP
+    background: $background-color; // added by SP
+    margin: 0 auto 1em auto; // added by SP
+    width:10em; // added by SP
 }
 
 
@@ -58,13 +60,14 @@ $icon-color: $quaternary;
 
 .banner-box {
     margin-bottom: 20px;
-    background-image: url($bannerbg);
+    background-image: url($bannerbg); // URL changed by SP
     background-size: cover;
-    background-position: center bottom;
+    background-position: center bottom; // vertical position changed by SP
     background-repeat: no-repeat;
     background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
 }
 
+// Five banner-box tags added by SP
 .banner-box a {
     font-weight:800;
     color:$link-color;
@@ -157,6 +160,8 @@ $icon-color: $quaternary;
     display: table;
 }
 
+// PARAGRAPH and LIST ALIGNMENT added by SP
+
 .col2 p, .col3 p, .col4 p, .col2 li, .col3 li, .col4 li {text-align:left;}
 
 //ICON AND BOX HEADING COLOR
@@ -187,7 +192,7 @@ $icon-color: $quaternary;
     text-align: center;
 }
 
-// ICON CONFIG (this section does not exist in master)
+// ICON CONFIG two single-box tags added by SP
 .single-box .fa {
     color: $icon-color;
     font-size:4em;
@@ -222,7 +227,7 @@ $icon-color: $quaternary;
     list-style-type: none;
 }
 
-//LIST ALIGNMENT - extras added by Southpaw
+//LIST ALIGNMENT - three additional tags added by Southpaw
 .feature-list .fa {
     font-size: 1em;
     color: $link-color;
