@@ -3,9 +3,9 @@ $("body").on("click", "#banner-content_wrap_toggle", function() {
   $("#banner-content_wrap").slideToggle();
 
   let buttonText =
-    $(this).text() === "Expand Details"
-      ? "Hide Details"
-      : "Expand Details";
+    $(this).text() === "Learn more"
+      ? "Minimize"
+      : "Learn more";
 
   $(this).text(buttonText);
 });
