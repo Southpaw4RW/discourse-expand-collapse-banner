@@ -2,31 +2,45 @@
    VARIABLES: choose the colors of your banner
 -------------------------------------------------*/
 
-$main-color: #5270FE;
-$background-color: #BFD7FF;
+$main-color: $primary;
+$text-color: $primary;
+$link-color: $tertiary;
+$background-color:$secondary;
+$button-color:$tertiary;
+$highlight-color:$secondary;
+$icon-color: $quaternary;
 
 /*-------------------------------------------------
    EXPAND-COLLAPSE BANNER
 -------------------------------------------------*/
 #banner-content_wrap_toggle {
     display: block;
-    background: $background-color;
+    background: $button-color;
     text-align: center;
-    color: $main-color;
+    color: $highlight-color;
     font-weight: bold;
     text-decoration:none;
-    padding: 6px 12px;
+    border:1px solid $tertiary;
+    padding: 0px 12px;
+}
+
+#banner-content_wrap_toggle:visited {
+    color: $highlight-color;
+    background: $tertiary;
+    border: 1px solid $tertiary;
 }
 
 #banner-content_wrap_toggle:hover {
     text-decoration:none;
-    color: $background-color;
-    background: $main-color;
+    color: $text-color;
+    background: $background-color;
 }
 
 .banner-content_toggle_wrapper {
-    float: right;
     border: 2px solid $main-color;
+    background: $background-color;
+    margin: 0 auto 1em auto;
+    width:10em;
 }
 
 
@@ -44,11 +58,33 @@ $background-color: #BFD7FF;
 
 .banner-box {
     margin-bottom: 20px;
-    background-image: url("https://i.imgur.com/4qwhXM3.jpg");
+    background-image: url($bannerbg);
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
+}
+
+.banner-box a {
+    font-weight:800;
+    color:$link-color;
+}
+
+.banner-box a:visited {
+    color:$link-color;
+}
+
+.banner-box a:hover {
+    color:$text-color;
+}
+
+.banner-box .buttons a {
+    font-weight:800;
+    color:$highlight-color;
+}
+
+.banner-box .buttons a:hover {
+    color:$text-color;
 }
 
 #banner-content_wrap {
@@ -121,6 +157,8 @@ $background-color: #BFD7FF;
     display: table;
 }
 
+.col2 p, .col3 p, .col4 p, .col2 li, .col3 li, .col4 li {text-align:left;}
+
 //ICON AND BOX HEADING COLOR
 
 .banner-box .single-box .x-icon, .single-box h3 {
@@ -149,6 +187,16 @@ $background-color: #BFD7FF;
     text-align: center;
 }
 
+// ICON CONFIG (this section does not exist in master)
+.single-box .fa {
+    color: $icon-color;
+    font-size:4em;
+}
+
+.single-box .fa:hover {
+    color:$text-color;
+}
+
 //TEXT ALIGNMENT INSIDE BUTTONS
 
 #my-button {
@@ -174,12 +222,27 @@ $background-color: #BFD7FF;
     list-style-type: none;
 }
 
+//LIST ALIGNMENT - extras added by Southpaw
+.feature-list .fa {
+    font-size: 1em;
+    color: $link-color;
+}
+
+.feature-list a {
+    color:$link-color;
+    font-weight:normal;
+}
+
+.feature-list a:hover{
+    color:$text-color;
+}
 
 //BUTTON BACKGROUND
 
 .col2, .col3, .col4 {
     .btn.btn-icon-text.ember-view {
-        background: $main-color;
+        background: $button-color; // Southpaw change
+        border: thin solid $tertiary;  // Southpaw addition
     }
 }
 
